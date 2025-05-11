@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/mentor_model.dart';
-import '../utils/app_colors.dart'; // Assuming you created this
+import '../utils/app_colors.dart';
 
 class MentorCard extends StatelessWidget {
   final Mentor mentor;
@@ -25,7 +25,6 @@ class MentorCard extends StatelessWidget {
                 CircleAvatar(
                   radius: 32,
                   backgroundImage: NetworkImage(mentor.imageUrl),
-                  // Or AssetImage
                   backgroundColor: Colors.grey[300],
                 ),
                 const SizedBox(width: 16.0),
@@ -104,7 +103,6 @@ class MentorCard extends StatelessWidget {
                           ),
                           const SizedBox(width: 4.0),
                           Expanded(
-                            // To prevent overflow if text is long
                             child: Text(
                               mentor.specialization,
                               style: const TextStyle(
